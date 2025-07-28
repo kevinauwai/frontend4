@@ -1,0 +1,15 @@
+.container{
+    width: 900px;
+    margin:70px auto;
+    /* filter: grayscale(100%); */
+    /* filter:brightness(200%); */
+    /* filter:hue-rotate(180deg); */
+    /* filter:invert(100%); */
+    /* filter:saturate(200%); */
+    /* filter:sepia(100%); */
+    filter:grayscale(100%) blur(2px);
+}
+img{
+    max-width: 100%;
+    
+}

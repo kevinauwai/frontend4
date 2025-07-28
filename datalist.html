@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head></head>
+    <body>
+        <main>
+            <label for="favlang">Favorite Programming language</label>
+            <input  list="Lang" name="favLang" id="favLang"/>
+            <datalist id="Lang">
+                <option value="HTML"></option>
+                <option value="CSS"></option>
+                <option value="Javascript"></option>
+            </datalist>
+            <br>
+            <!-- time -->
+            <input type="time"  list="popularHours" />
+            <datalist id="popularHours">
+                <option value="08:00"></option>
+                <option value="10:00"></option>
+                <option value="12:00"></option>
+            </datalist>
+            <br/>
+            <!-- tips -->
+            <label for="tick">Tip Amount</label>
+            <input type="range" name="tick" list="tickmarks" min="0" max="100" id="tick">
+            <datalist id="popularHours">
+                <option value="0"></option>
+                <option value="10"></option>
+                <option value="20"></option>
+                <option value="30"></option>
+                <option value="40"></option>
+                <option value="50"></option>
+                <option value="60"></option>
+                <option value="70"></option>
+                <option value="80"></option>
+                <option value="90"></option>
+                <option value="100"></option>
+            </datalist>
+            <br/>
+            <input type="color" name="color" id="color" list="refColors" value="#ff0000"/>
+            <datalist id="refColors">
+                <option value="#ff0000"></option>
+                <option value="#ff0000"></option>
+                <option value="#ff0000"></option>
+            </datalist>
+            <br/>
+            <label for="fuel">Fuel level:</label>
+
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="70">
+  at 50/100
+</meter>
+<br/>
+<figure>
+    <video controls autoplay name="media" src="./media/demo.mp4" type="video/mp4"></video>
+    <figcaption>video</figcaption>
+</figure>
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+        </main>
+    </body>
+</html>

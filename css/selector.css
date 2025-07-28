@@ -1,0 +1,79 @@
+*{
+    border:1px solid red;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+p{
+    color:#55eb14;
+}
+/* id selector */
+#heading{
+ color:blueviolet;
+}
+#unique-box{
+    border:2px solid black;
+}
+/* class selector */
+.simply{
+    color:red;
+}
+.inner-box{
+    border:1px solid #ccc
+}
+/* attribute selector */
+[type="text"]{
+    border:2px solid #007bff;
+}
+/* Descendant selector */
+/* element */
+ul li{
+    color:peru;
+}
+/* class */
+ul.list li.highlight{
+    color:red;
+}
+/* direct chiled */
+ul.list >li{
+    color:green;
+}
+/* direct child with element */
+div>h2{
+    color:purple;
+}
+.box>.child{
+    color:blue;
+}
+.inner-box.first-box{
+    border:3px solid rgb(0, 242, 255);
+}
+/* multiple elements */
+h5,h6{
+    color:cyan;
+}
+/* multiple classes */
+.multiple1,.multiple2{
+    color:red;
+}
+/* adjacent slibling Selector div 之后的第一个 +表示紧跟后面*/
+div+a{
+    color:gold;
+}
+.link +.box-sibling{
+    background-color: lightcoral;
+}
+/* ~表示所有的兄弟 */
+.box ~.general-sibling{
+    color:#eaf610;
+    font-style: italic;
+}
+h1 ~h4{
+    color:brown;
+}
+.pseudo-class-link:hover{
+    color:#ff5733;
+    text-decoration: dashed;
+}
+p::first-line{
+    background-color: rgb(12, 213, 96);
+}
