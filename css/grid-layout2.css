@@ -1,0 +1,49 @@
+html,body{
+    padding:0;
+    margin:0;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    max-width: 100%;
+    background: #f4f4f4;
+    height:100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50px 50px auto 50px;
+}
+
+header{
+    background-color: #000;
+    color:white;
+    grid-column: span 2;
+    padding: 20px;
+}
+nav{
+    background-color: #666;
+    color:white;
+    padding: 20px;
+}
+.search{
+    background-color: #666;
+    color:white;
+    padding: 20px;
+}
+main{
+background-color: white;
+padding: 20px;
+}
+aside{
+    background-color: #333;
+    padding: 20px;
+    color:white;
+}
+footer{
+    background-color: #000;
+    grid-column: span 2;
+    color:white;
+}
