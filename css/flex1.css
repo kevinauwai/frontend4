@@ -14,8 +14,9 @@ header{
     padding: 15px;
     background-color: coral;
     text-transform: capitalize;
+    position: relative;
 }
-nav ul{
+nav .nav-menu{
     margin-top: 0;
     list-style-type: none;
     padding: 15px;
@@ -24,6 +25,9 @@ nav ul{
     gap: 10px;
     background-color: #f5f2f1 ;
     font-weight: bold;
+    transition:transform 0.3s ease;
+    /* display: block;
+    transform: translateX(0); */
 }
 nav a{
     text-decoration: none;
@@ -70,6 +74,17 @@ aside .item.item-1{
     background-color: coral;
     color:white;
 }
+.mobile-menu-toggle{
+    position: absolute;
+    top:40px;
+    right: 10px;
+    font-size: 28px;
+    display: none;
+    cursor: pointer;
+}
+.nav-menu.active{
+    transform: translateX(0);
+}
 @media screen and (max-width: 800px) {
     main{
         display: flex;
@@ -84,8 +99,18 @@ aside .item.item-1{
         padding: 10px 0px 0px 15px;
         width: 100%;
     }
-    nav ul{
-        flex-direction: column;
+    nav{
+        position: relative;
     }
-    
+    nav ul{
+        width: 100%;
+        position: absolute;
+        top:0;
+        height:100vh;
+        flex-direction: column;
+        transform: translateX(-100%);
+    }
+    .mobile-menu-toggle{
+        display: block;
+    }
   }

@@ -1,0 +1,47 @@
+html,body{
+    padding:0;
+    margin:0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    height:100vh;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width:100px;
+    height:100px;
+    position: relative;
+    animation:spin 2s linear infinite;
+    border: 1px solid red;
+}
+.box::before,.box::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:35px;
+    width: 30px;
+    height:30px;
+    border-radius: 50%;
+    background: cyan;
+    animation: bounce 2s infinite ease-in-out;
+    
+}
+.box::after{
+    left:-35px;
+    background: coral;
+}
+@keyframes spin{
+    100%
+    {transform: rotate(360deg);}
+}
+@keyframes bounce {
+    0%,
+    100%
+    {transform: translateY(0);}
+    50%
+    {transform: translateY(-35px);}
+
+}

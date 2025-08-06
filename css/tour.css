@@ -1,0 +1,161 @@
+html,body{
+    margin:0;
+    padding:0;
+    font-family: 'Courier New', Courier, monospace;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    height:100%;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+li{
+    list-style:none;
+}
+img{
+    width: 100%;
+}
+nav .container{
+    width: 100%;
+    padding: 0 2rem;
+}
+.navbar{
+    background-color: white;
+    padding: 1rem 2rem;
+    height:80px;
+    display: flex;
+}
+.navbar-flex {
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    /* justify-content:space-between; */
+}
+.navbar .main-menu{
+    width: 100%;
+}
+.menu-list{
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    width: 90%;
+    justify-content: center;
+}
+.menu-list a{
+    color:blue;
+    font-weight: bold;
+}
+.navbar .logo{
+    width: 100px;
+}
+ .mobile-menu{
+    display: none;
+    width: 80%;
+}
+.navbar .mobile-menu-items{
+    position: absolute;
+    top:80px;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    background-color: #888;
+    transition:transform 0.3s ease;
+    transform: translateX(100%);
+}
+.navbar .mobile-menu-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding-top: 100px;
+    gap: 2rem;
+    font-size: 1.2rem;
+}
+.navbar .mobile-menu-toggle{
+    position: absolute;
+    top:20px;
+    right:20px;
+    cursor: pointer;
+    font-size: 28px;
+}
+.navbar .mobile-menu-items.active{
+    transform: translateX(0);
+}
+.navbar .mobile-menu{
+    display: none;
+}
+.icons{
+    width: 10%;
+    text-align: right;
+}
+
+.banner{
+    position: relative;
+    background-image: url(../img/bg.jpg);
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    background-size: cover; 
+    width: 100%;
+    height:600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bannercontent{
+    position: absolute;
+    z-index: 99;
+    width: 600px;
+}
+section{
+     padding: 15px;
+}
+#aboutus .content{
+    display: flex;
+    flex-direction: row;
+}
+#aboutus img{
+    width: 50%;
+}
+#aboutus .aboutus_description{
+    padding: 15px;
+}
+
+#services{
+    display: flex;
+    flex-direction: row;
+
+}
+#services .item{
+    display: flex;
+    flex-direction: row;
+    padding:2rem;
+}
+#services .item .subitem{
+    line-height: 1.2rem;
+    padding: 0px 10px;
+}
+.subject{
+    text-align: center;
+}
+footer{
+    position: static;
+    bottom: 0;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    height:100px;
+}
+@media (max-width:768px) {
+    .navbar .main-menu{
+        display: none;
+    }
+    .navbar .mobile-menu{
+        display: block;
+
+    }
+}
