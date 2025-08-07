@@ -58,3 +58,70 @@ const onKeyDown=e=>{
     }
 }
 itemInput.addEventListener("keydown",onKeyDown);
+
+// ==========================================================
+// input events
+const itemInput2=document.getElementById("item-input");
+const priority=document.getElementById("priority-input");
+const checkbox=document.getElementById("checkbox");
+const heading =document.querySelector("h1");
+function onInput(e){
+    heading.textContent=e.target.value;
+}
+itemInput2.addEventListener("input",onInput);
+
+// checkbox
+function onChecked(e){
+    const isChecked=e.target.checked;
+    console.log(isChecked);
+    heading.textContent=isChecked?"checked":"not checked"
+}
+checkbox.addEventListener("input",onChecked);
+
+// select the input field
+function onFocus(){
+    console.log("Input is focused");
+    itemInput2.style.outlineStyle="solid";
+    itemInput2.style.outlineColor="red";
+    itemInput2.style.outlineWidth="2px";
+}
+itemInput2.addEventListener("focus",onFocus);
+
+function onBur(){
+    console.log("Input is not focuesd");
+    itemInput2.style.outlineStyle="none";
+}
+itemInput2.addEventListener("blur",onBur);
+// react style onChange
+priority.addEventListener("change",onInput);
+
+// ===========================================================
+// form submit
+const form =document.getElementById("item-form");
+function onSubmit(e){
+    e.preventDefault();
+    console.log("Form was submited");
+    const item=document.getElementById("item-input").value;
+    const priority=document.getElementById("priority-input").value;
+    if(item===""||priority==="0"){
+        alert("Please enter an item and priority");
+        return;
+    }
+    console.log(item,priority);
+}
+
+form.addEventListener("submit",onSubmit);
+
+function onSubmit2(e){
+    e.preventDefault();
+    const formData=new FormData(form);
+    const item =formData.get("item");
+    const priority=formData.get("priority");
+    console.log(item,priority);
+    const entries=formData.entries();
+    console.log(entries);
+    for(const entry of entries){
+        console.log(entry[1]);
+    }
+}
+form.addEventListener("submit",onSubmit2);

@@ -21,13 +21,23 @@
         <img src="./img/logo.svg" alt="">
         <h1>JS Shopping List</h1>
     </header>
-    <form id="item-form" action="">
+    <form id="item-form" >
         <div class="form-control">
             <input type="text" class="form-input" id="item-input" name="item" placeholder="Enter Item">
         </div>
+        <!-- select input -->
+         <select name="priority" id="priority-input" class="form-input">
+            <option value="0">Select Priorty</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+         </select>
+         <!-- checkbox -->
+          <input type="checkbox" id="checkbox" />RecurringItem
          <div class="form-control">
                 <button type="submit" id="btn-submit" class="btn"><i class="fa-solid fa-plus"></i>Add Item</button>
             </div>
+        
     </form>
     <div class="filter">
         <input type="text" class="form-input-filter" name="" id="filter" placeholder="Filter Items">
@@ -65,6 +75,7 @@
 <!-- <script src="./js/js-shopping6.js"></script> -->
     <!-- <script src="./js/js-shopping7.js"></script> -->
 <!-- <script src="./js/js-shopping8.js"></script> -->
- <script src="./js/js-shopping9.js"></script>
+ <!-- <script src="./js/js-shopping9.js"></script> -->
+   <script src="./js/js-shopping10.js"></script>
 </body>
 </html>
